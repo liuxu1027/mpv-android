@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries_resume_last">
+        <item>询问</item>
+        <item>始终继续播放</item>
+        <item>从头播放</item>
+    </string-array>
+    <string-array name="values_resume_last">
+        <item>ask</item>
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+
+    <string-array name="entries_sticky_video">
+        <item>画中画 (PIP)</item>
+        <item>后台播放音频</item>
+        <item>停止</item>
+    </string-array>
+    <string-array name="values_sticky_video">
+        <item>pip</item>
+        <item>background</item>
+        <item>stop</item>
+    </string-array>
+
+    <string-array name="entries_core_limit">
+        <item>自动</item>
+        <item>1 线程</item>
+        <item>2 线程</item>
+        <item>4 线程</item>
+        <item>8 线程</item>
+    </string-array>
+    <string-array name="values_core_limit">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="entries_deinterlacer">
+        <item>关闭</item>
+        <item>YADIF</item>
+    </string-array>
+    <string-array name="values_deinterlacer">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="entries_audio_device">
+        <item>自动</item>
+        <item>AudioTrack</item>
+        <item>OpenSL ES</item>
+    </string-array>
+    <string-array name="values_audio_device">
+        <item>auto</item>
+        <item>audiotrack</item>
+        <item>opensles</item>
+    </string-array>
+
+    <string-array name="entries_subtitle_charset">
+        <item>自动检测</item>
+        <item>UTF-8</item>
+        <item>GB18030 (简体中文)</item>
+        <item>Big5 (繁体中文)</item>
+    </string-array>
+    <string-array name="values_subtitle_charset">
+        <item></item>
+        <item>utf-8</item>
+        <item>gb18030</item>
+        <item>big5</item>
+    </string-array>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditTextPreference
+        app:defaultValue=""
+        app:key="subtitle_folder"
+        app:summary="外挂字幕搜索路径"
+        app:title="字幕目录"
+        app:useSimpleSummaryProvider="true" />
+
+    <ListPreference
+        app:defaultValue=""
+        app:entries="@array/entries_subtitle_charset"
+        app:entryValues="@array/values_subtitle_charset"
+        app:key="subtitle_charset"
+        app:title="字幕字符编码"
+        app:useSimpleSummaryProvider="true" />
+
+    <EditTextPreference
+        app:defaultValue=""
+        app:key="subtitle_language"
+        app:summary="例如：zho,chi,eng（逗号分隔）"
+        app:title="首选字幕语言"
+        app:useSimpleSummaryProvider="true" />
+
+    <CheckBoxPreference
+        app:defaultValue="true"
+        app:key="subtitle_show_hw"
+        app:summary="控制字幕图层显示与隐藏"
+        app:title="显示字幕" />
+
+    <EditTextPreference
+        app:defaultValue="0"
+        app:key="subtitle_default_sync"
+        app:summary="单位：秒（支持正负小数）"
+        app:title="默认字幕同步延迟"
+        app:useSimpleSummaryProvider="true" />
+
+    <EditTextPreference
+        app:defaultValue=""
+        app:key="typeface_dir"
+        app:summary="自定义字幕字体目录路径"
+        app:title="字体目录"
+        app:useSimpleSummaryProvider="true" />
+
+    <CheckBoxPreference
+        app:defaultValue="true"
+        app:key="subtitle_hw_accel"
+        app:summary="开启后将字幕直接混合渲染到视频帧"
+        app:title="字幕硬件加速混合" />
+
+</PreferenceScreen>

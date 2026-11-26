@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="category_hardware_decoder"
+        app:title="硬件解码">
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="omxdecoder_local"
+            app:summary="本地视频优先启用 MediaCodec 硬解"
+            app:title="本地视频硬件解码" />
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="omxdecoder_net"
+            app:summary="网络流媒体优先启用 MediaCodec 硬解"
+            app:title="网络视频硬件解码" />
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="correct_hw_aspect_ratio"
+            app:summary="保持容器或像素宽高比"
+            app:title="修正硬件解码宽高比" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="category_software_decoder"
+        app:title="软件解码">
+
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="swdecoder_local"
+            app:summary="强制本地视频使用 FFmpeg 软解"
+            app:title="本地视频软件解码" />
+
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="swdecoder_net"
+            app:summary="强制网络视频使用 FFmpeg 软解"
+            app:title="网络视频软件解码" />
+
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/entries_core_limit"
+            app:entryValues="@array/values_core_limit"
+            app:key="core_limit"
+            app:title="软解线程数限制"
+            app:useSimpleSummaryProvider="true" />
+
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="use_speedup_tricks"
+            app:summary="启用快速解码与跳过非参考帧环路滤波"
+            app:title="解码加速优化" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="category_general"
+        app:title="通用">
+
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/entries_deinterlacer"
+            app:entryValues="@array/values_deinterlacer"
+            app:key="default_deinterlacer"
+            app:title="默认去隔行模式"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

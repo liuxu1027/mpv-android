@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        app:defaultValue="false"
+        app:key="audio_player"
+        app:summary="仅输出音频轨道，不渲染视频画面"
+        app:title="纯音频模式" />
+
+    <ListPreference
+        app:defaultValue="auto"
+        app:entries="@array/entries_audio_device"
+        app:entryValues="@array/values_audio_device"
+        app:key="audio_device"
+        app:title="音频输出后端"
+        app:useSimpleSummaryProvider="true" />
+
+    <CheckBoxPreference
+        app:defaultValue="false"
+        app:key="volume_boost"
+        app:summary="允许软件音量增益突破 100%（最高 200%）"
+        app:title="音量增强" />
+
+    <CheckBoxPreference
+        app:defaultValue="true"
+        app:key="pause_on_headset_disconnected"
+        app:summary="拔出有线耳机或断开蓝牙音频时自动暂停"
+        app:title="断开耳机时暂停" />
+
+    <EditTextPreference
+        app:defaultValue=""
+        app:key="audio_language"
+        app:summary="例如：zho,chi,eng（逗号分隔）"
+        app:title="首选音轨语言"
+        app:useSimpleSummaryProvider="true" />
+
+    <EditTextPreference
+        app:defaultValue="0"
+        app:key="audio_delay"
+        app:summary="单位：秒（支持正负小数）"
+        app:title="音频同步延迟"
+        app:useSimpleSummaryProvider="true" />
+
+    <EditTextPreference
+        app:defaultValue="0"
+        app:key="bluetooth_audio_delay"
+        app:summary="单位：秒（叠加蓝牙延迟补偿）"
+        app:title="蓝牙音频延迟"
+        app:useSimpleSummaryProvider="true" />
+
+    <CheckBoxPreference
+        app:defaultValue="true"
+        app:key="prefer_audio_passthrough_mode"
+        app:summary="优先透传 AC3 / EAC3 / DTS 音轨"
+        app:title="音频直通输出 (Passthrough)" />
+
+</PreferenceScreen>

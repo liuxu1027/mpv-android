@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="category_player_interface"
+        app:title="界面">
+
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="double_tap_back_key"
+            app:summary="需要连续按两次返回键才退出播放器"
+            app:title="双击返回键退出" />
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="quick_zoom"
+            app:summary="允许双指捏合快速缩放画面"
+            app:title="双指缩放" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="category_player_playback"
+        app:title="播放">
+
+        <ListPreference
+            app:defaultValue="ask"
+            app:entries="@array/entries_resume_last"
+            app:entryValues="@array/values_resume_last"
+            app:key="resume_last"
+            app:title="断点续播"
+            app:useSimpleSummaryProvider="true" />
+
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="resume_only_first"
+            app:summary="仅对当前会话首次打开的视频恢复进度"
+            app:title="仅首次续播" />
+
+        <SeekBarPreference
+            android:max="400"
+            app:defaultValue="100"
+            app:key="default_playback_speed"
+            app:min="25"
+            app:showSeekBarValue="true"
+            app:summary="单位：百分比（100 表示 1.0x）"
+            app:title="默认播放倍速 (%)" />
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="fast_seek"
+            app:summary="定位到最近关键帧以提高拖动响应速度"
+            app:title="快速定位 (Fast Seek)" />
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="audio_focus"
+            app:summary="其他应用播放音频时自动暂停"
+            app:title="音频焦点管理" />
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="media_buttons"
+            app:summary="响应蓝牙或有线耳机的媒体控制按键"
+            app:title="耳机线控按键" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="category_player_sticky"
+        app:title="后台与画中画">
+
+        <ListPreference
+            app:defaultValue="pip"
+            app:entries="@array/entries_sticky_video"
+            app:entryValues="@array/values_sticky_video"
+            app:key="sticky_video"
+            app:title="切出应用时视频行为"
+            app:useSimpleSummaryProvider="true" />
+
+        <CheckBoxPreference
+            app:defaultValue="true"
+            app:key="sticky_audio"
+            app:summary="仅播放音频时保留后台播放"
+            app:title="后台音频播放" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
