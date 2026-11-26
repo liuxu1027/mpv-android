@@ -32,6 +32,19 @@
             android:value="true" />
         <meta-data android:name="com.lge.support.SPLIT_WINDOW"
             android:value="true" />
+        <activity
+            android:name=".PurePlayerActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name=".PureSettingsActivity"
+            android:exported="false"
+            android:label="PurePlayer 设置" />
 
         <activity
             android:name=".MPVActivity"
