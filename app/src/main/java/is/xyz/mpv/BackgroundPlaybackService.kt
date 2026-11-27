@@ -59,7 +59,7 @@ class BackgroundPlaybackService : Service(), MPVLib.EventObserver {
     }
 
     private fun buildNotification(): Notification {
-        val notificationIntent = Intent(this, MPVActivity::class.java)
+        val notificationIntent = Intent(this, PurePlayerActivity::class.java)
         notificationIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
         val pendingIntent = PendingIntentCompat.getActivity(this, 0,
             notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT, false)

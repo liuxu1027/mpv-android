@@ -1,7 +1,6 @@
 package `is`.xyz.mpv
 
 import `is`.xyz.filepicker.DocumentPickerFragment
-import `is`.xyz.mpv.preferences.PreferenceActivity
 import `is`.xyz.mpv.databinding.FragmentMainScreenBinding
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -113,7 +112,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         }
         binding.settingsBtn.setOnClickListener {
             saveChoice("") // will reset
-            startActivity(Intent(context, PreferenceActivity::class.java))
+            startActivity(Intent(context, PureSettingsActivity::class.java))
         }
 
         if (BuildConfig.DEBUG) {
@@ -214,9 +213,9 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         } else {
             i = Intent()
             // if we pass 'filepath' it will go directly to mpv without any processing
-            i.putExtra("filepath", filepath)
+            i.putExtra("video_path", filepath)
         }
-        i.setClass(requireContext(), MPVActivity::class.java)
+        i.setClass(requireContext(), PurePlayerActivity::class.java)
         playerLauncher.launch(i)
     }
 
