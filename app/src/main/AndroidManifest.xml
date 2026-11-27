@@ -208,7 +208,8 @@
         <activity
             android:name=".PureSettingsActivity"
             android:exported="false"
-            android:label="PurePlayer 设置" />
+            android:label="PurePlayer 设置"
+            android:theme="@style/AppTheme.Preference" />
 
         <activity
             android:name=".MPVActivity"
