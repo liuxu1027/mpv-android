@@ -98,7 +98,7 @@ class PurePlayerActivity : AppCompatActivity(), MPVLib.EventObserver {
     )
 
     private val mpvClientAdapter = object : MpvClient {
-        override fun setOptionString(name: String, value: String) = MPVLib.setOptionString(name, value)
+        override fun setOptionString(name: String, value: String) { MPVLib.setOptionString(name, value) }
         override fun setPropertyString(name: String, value: String) = MPVLib.setPropertyString(name, value)
         override fun setPropertyBoolean(name: String, value: Boolean) = MPVLib.setPropertyBoolean(name, value)
         override fun setPropertyInt(name: String, value: Int) = MPVLib.setPropertyInt(name, value)
